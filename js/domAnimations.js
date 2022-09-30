@@ -6,10 +6,11 @@ const parallax2 = document.querySelector(".img-2");
 const fadeIn = document.querySelector(".fade-in");
 const headerContainer = document.querySelector(".about-container");
 const options = {threshold: 1, rootMargin: "0px"};
-/* const text = document.querySelector(".main-title"); */
+const text = document.querySelector(".main-title");
+let character = 0;
 
 // responsive menu //
-    
+
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active")
     navMenu.classList.toggle("active")
@@ -38,26 +39,29 @@ window.addEventListener("scroll", () => {
 
 // fade in animation //
 
-setTimeout(() => {
-    (fadeInAnimation = () => {
-        const fadeInOnScroll = new IntersectionObserver((entries, fadeInOnScroll) => {
-            entries.forEach(entry => {
-                !entry.isIntersecting ? null : (entry.target.classList.toggle("appear"),
-                fadeInOnScroll.unobserve(entry.target))
-            })
-        }, options)
-        
-        fadeInOnScroll.observe(fadeIn)
-    })()
-}, 2000)
-setTimeout(() => {
-    headerContainer.style.marginTop = "12rem"
-    headerContainer.style.zIndex = "1"
-}, 7000)
+(fadeInAnimation = () => {
+    const fadeInOnScroll = new IntersectionObserver((entries, fadeInOnScroll) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                null
+            } else {
+                setTimeout(() => {
+                    entry.target.classList.toggle("appear")
+                }, 1000)
+                setTimeout(() => {
+                    headerContainer.style.marginTop = "12rem"
+                    headerContainer.style.zIndex = "1"
+                }, 8000)
+                fadeInOnScroll.unobserve(entry.target)
+            }
+        })}, options)
+
+    fadeInOnScroll.observe(fadeIn)
+})();
 
 // title animation //
 
-/* const textString = text.textContent;
+const textString = text.textContent;
 const textSplit = textString.split("");
 text.textContent = "";
 
@@ -65,21 +69,34 @@ for (let i = 0; i < textSplit.length; i++) {
     text.innerHTML += "<span>" + textSplit[i] + "</span>"
 }
 
-let character = 0;
+(fadeTitleAnimation = () => {
+    const fadeTitleOnScroll = new IntersectionObserver((entries, fadeTitleOnScroll) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                null
+            } else {
+                entry.target.classList.toggle("appear")
+                
+                const onTick = () => {
+                    const span = text.querySelectorAll("span")[character]
+                    span.classList.add("reveal")
+                    character++
+                    if (character === textSplit.length) {
+                        complete()
+                        return
+                    }
+                }
 
-const onTick = () => {
-    const span = text.querySelectorAll("span")[character]
-    span.classList.add("fade")
-    character++
-    if (character === textSplit.length) {
-        complete()
-        return
-    }
-}
+                const complete = () => {
+                    clearInterval(timer)
+                    timer = null
+                }
 
-let timer = setInterval(onTick, 110);
+                let timer = setInterval(onTick, 110)
+                
+                fadeTitleOnScroll.unobserve(entry.target)
+            }
+        })}, options)
 
-const complete = () => {
-    clearInterval(timer)
-    timer = null
-} */
+    fadeTitleOnScroll.observe(text)
+})();

@@ -1,0 +1,68 @@
+.modal-content{
+    background-color: transparent;
+    border: none;
+}
+
+.modal-dialog {
+    max-width: fit-content;
+}
+
+.modals{
+    @include flex-column;
+    background-color: $gray;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.15rem 0.15rem 0.5rem $main-color;
+    width: fit-content;
+
+    &-btn{
+        align-self: flex-end;
+        background-color: transparent;
+        border: none;
+    }
+
+    &-close{
+        cursor: pointer;
+        color: $white;
+        font-size: 1.5rem;
+        -webkit-transition: all 0.15s ease;
+        transition: all 0.15s ease;
+
+        &:hover, &:focus{
+            color: $main-color;
+        }
+    }
+
+    &-header{
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: -1rem;
+        padding-bottom: 1rem;
+        color: $main-color;
+        text-shadow: 0.1rem 0.1rem 0.15rem $dark-background;
+    }
+
+    &-iFrame{
+        display: block;
+        width: 35rem;
+        height: 19.688rem;
+        border-radius: 0.5rem;
+        filter: drop-shadow(0 0.25rem 0.15rem rgba(20, 20, 20, 0.75));
+        padding-bottom: 1rem;
+
+        &-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &-p{
+        text-align: center;
+        max-width: 25rem;
+        padding-bottom: 0.5rem;
+    }
+    &-data{
+        text-align: center;
+    }
+}

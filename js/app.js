@@ -1,9 +1,9 @@
-const cardsContainer = document.querySelector(".card-container");
+const cardsContainer = document.querySelector(".cards-container");
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
 let lastDoc = null;
 let firstDoc = null;
-const errorCard = document.querySelector(".card-error");
+const errorCard = document.querySelector(".cards-error");
 const loader = document.querySelector(".loader");
 
 // data fecht //
@@ -26,7 +26,7 @@ const getData = async () => {
     }
 }
 
-// create cards //
+// create cards and modals //
 
 const loadDocs = (docs) => {
     if (docs.length > 0) {
@@ -37,15 +37,40 @@ const loadDocs = (docs) => {
         cardsContainer.innerHTML = ""
         docs.forEach(doc => {
             cardsContainer.innerHTML +=
-            `<div class="card">
-                <img class="card-img" src="${doc.data().poster}" alt="${doc.data().title}" loading="lazy">
-                <div class="card-info">
-                    <h2 class="card-title">${doc.data().title}</h2>
+        `<button type="button" class="main-button" data-bs-toggle="modal" data-bs-target="#${doc.data().id}">
+            <div class="cards">
+            <img class="cards-img" src="${doc.data().poster}" alt="${doc.data().title}" loading="lazy">
+                <div class="cards-info">
+                    <h3 class="cards-title">${doc.data().title}</h3>
                 </div>
-            </div>`
+            </div>
+        </button>
+        <div class="modal fade" id="${doc.data().id}" tabindex="-1" data-bs-backdrop="static"
+        data-bs-keyboard="false" aria-labelledby="${doc.data().id}Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modals">
+                        <button type="button" class="modals-btn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="modals-close fa-solid fa-x"></i>
+                        </button>
+                        <h4 class="modals-header">${doc.data().title}</h4>
+                        <div class="modals-iFrame-container">
+                            <iframe class="modals-iFrame" src="${doc.data().trailer}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                            picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h5 class="modals-data">Reparto:</h5>
+                        <p class="modals-p">${doc.data().cast}.</p>
+                        <p class="modals-data">Género: ${doc.data().genre}.<br>Temporadas: ${doc.data().seasons}.
+                        <br>Año de estreno: ${doc.data().release}.</p>
+                    </div>
+                </div>
+            </div>
+        </div>`
         })
-        
-        showInfo()
+
+        cardAnimations()
 
     } else {
         loader.style.display = "none"
@@ -58,22 +83,22 @@ const loadDocs = (docs) => {
 
 // card animations //
 
-const showInfo = () => {
-    const cards = document.querySelectorAll(".card")
+const cardAnimations = () => {
+    const cards = document.querySelectorAll(".cards")
 
     for (let i = 0; i < cards.length; i++) {
-        const card = cards[i];
+        const card = cards[i]
         card.addEventListener("mouseover", () => {
-            const info = card.querySelector(".card-info")
-            const title = card.querySelector(".card-title")
+            const info = card.querySelector(".cards-info")
+            const title = card.querySelector(".cards-title")
             info.style.transform = "translateY(0)"
             info.style.opacity = "1"
-            info.style.boxShadow = "inset 0.5rem 0.5rem 1rem #E50914"
+            info.style.boxShadow = "inset 0.25rem 0.25rem 0.5rem #E50914"
             title.style.opacity = "1"
         })
         card.addEventListener("mouseleave", () => {
-            const info = card.querySelector(".card-info")
-            const title = card.querySelector(".card-title")
+            const info = card.querySelector(".cards-info")
+            const title = card.querySelector(".cards-title")
             info.style.transform = "translateY(-15px)"
             info.style.opacity = "0"
             info.style.boxShadow = "none"
@@ -87,7 +112,7 @@ const showInfo = () => {
 (cardControllers = () => {
     nextBtn.addEventListener("click", () => {
         db.collection("series").orderBy("number", "asc").limit(4).startAfter(lastDoc).onSnapshot((snapshot) => {
-            loadDocs(snapshot.docs);
+            loadDocs(snapshot.docs)
         })
     })
     prevBtn.addEventListener("click", () => {
@@ -96,4 +121,4 @@ const showInfo = () => {
             loadDocs(docs)
          })
     })
-})();   
+})();
