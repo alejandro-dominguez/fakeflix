@@ -29,6 +29,9 @@ const getData = async () => {
 // create cards and modals //
 
 const loadDocs = (docs) => {
+    const template = document.querySelector("#template").content
+    const fragment = document.createDocumentFragment()
+
     if (docs.length > 0) {
         lastDoc = docs[docs.length - 1]
         firstDoc = docs[0]
@@ -36,40 +39,25 @@ const loadDocs = (docs) => {
         lastDoc.data().title === "The Sinner" ? nextBtn.style.display = "none" : nextBtn.style.display = "block"
         cardsContainer.innerHTML = ""
         docs.forEach(doc => {
-            cardsContainer.innerHTML +=
-        `<button type="button" class="main-button" data-bs-toggle="modal" data-bs-target="#${doc.data().id}">
-            <div class="cards">
-            <img class="cards-img" src="${doc.data().poster}" alt="${doc.data().title}" loading="lazy">
-                <div class="cards-info">
-                    <h3 class="cards-title">${doc.data().title}</h3>
-                </div>
-            </div>
-        </button>
-        <div class="modal fade" id="${doc.data().id}" tabindex="-1" data-bs-backdrop="static"
-        data-bs-keyboard="false" aria-labelledby="${doc.data().id}Label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modals">
-                        <button type="button" class="modals-btn" data-bs-dismiss="modal" aria-label="Close">
-                            <i class="modals-close fa-solid fa-x"></i>
-                        </button>
-                        <h4 class="modals-header">${doc.data().title}</h4>
-                        <div class="modals-iFrame-container">
-                            <iframe class="modals-iFrame" src="${doc.data().trailer}"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-                            picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <h5 class="modals-data">Reparto:</h5>
-                        <p class="modals-p">${doc.data().cast}.</p>
-                        <p class="modals-data">Género: ${doc.data().genre}.<br>Temporadas: ${doc.data().seasons}.
-                        <br>Año de estreno: ${doc.data().release}.</p>
-                    </div>
-                </div>
-            </div>
-        </div>`
+            template.querySelector(".main-button").setAttribute("data-bs-target", `#${doc.data().id}`)
+            template.querySelector(".cards-img").setAttribute("src", doc.data().poster)
+            template.querySelector(".cards-img").setAttribute("alt", doc.data().title)
+            template.querySelector(".cards-title").textContent = doc.data().title
+            template.querySelector(".modal").setAttribute("id", doc.data().id)
+            template.querySelector(".modal").setAttribute("aria-labelledby", `${doc.data().id}Label`)
+            template.querySelector(".modals-header").textContent = doc.data().title
+            template.querySelector(".modals-iFrame").setAttribute("src", doc.data().trailer)
+            template.querySelector(".modals-p").textContent = doc.data().cast
+            template.querySelector(".genre").textContent = doc.data().genre
+            template.querySelector(".seasons").textContent = doc.data().seasons
+            template.querySelector(".release").textContent = doc.data().release
+            
+            const clone = template.cloneNode(true)
+            fragment.appendChild(clone)
         })
 
+        cardsContainer.appendChild(fragment)
+        
         cardAnimations()
 
     } else {

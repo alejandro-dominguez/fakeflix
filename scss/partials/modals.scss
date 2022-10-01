@@ -65,4 +65,11 @@
     &-data{
         text-align: center;
     }
+    &-span{
+        display: inline;
+        opacity: 1;
+        transform: none;
+        transition: none;
+        -webkit-transition: none;
+    }
 }

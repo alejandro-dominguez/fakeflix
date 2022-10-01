@@ -1,0 +1,135 @@
+.contact{
+    @include flex-column;
+    margin: 2rem 0;
+
+    &-wrapper{
+        overflow: hidden;
+    }
+
+    &-container{
+        position: relative;
+        margin: 5rem 0 25rem 0;
+    }
+
+    &-img1{
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 20%;
+    }
+
+    &-img2{
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 20%;
+        rotate: 0deg;
+    }
+
+    &-img3{
+        position: absolute;
+        top: 20px;
+        left: 12.5%;
+        display: block;
+        width: 150%;
+    }
+
+    &-title{
+        font-family: "Bebas Neue", sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        font-size: 4.5rem;
+        padding: 1rem 0;
+        text-shadow: 0.1rem 0.1rem 0.25rem $main-color;
+    }
+
+    &-p{
+        font-size: 1.25rem;
+        width: 50vw;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &-form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50vw;
+        background-color: $gray;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        box-shadow: 0.25rem 0.25rem 0.5rem $main-color;
+
+        &-img{
+            position: absolute;
+            top: 15%;
+            right: 2rem;
+            display: block;
+            width: 25%;
+        }
+
+        &-label{
+            color: $main-color;
+            text-shadow: 0.15rem 0.15rem 0.15rem $black;
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        &-input{
+            width: 60%;
+            border-radius: 0.25rem;
+            height: 2.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            display: block;
+            outline: none;
+            text-align: left;
+            background-color: $white;
+            border: none;
+            padding-left: 1rem;
+        }
+
+        &-textarea{
+            border-radius: 0.25rem;
+            padding: 0.5rem 0 0 1rem;
+            width: 100%;
+            height: 10rem;
+            display: block;
+            outline: none;
+            resize: none;
+            text-align: left;
+            background-color: $white;
+            border: none;
+            margin-bottom: 0.5rem;
+        }
+
+        &-submit{
+            color: $white;
+            align-self: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.05rem;
+            display: block;
+            background-color: $black;
+            box-shadow: 0.15rem 0.15rem 0.15rem $main-color;
+            margin-top: 1rem;
+            padding: 0.25rem 1.25rem;
+            border-radius: 0.25rem;
+            border: none;
+            cursor: pointer;
+            -webkit-transition: all 0.15s ease;
+            transition: all 0.15s ease;
+    
+            &:hover{
+                background-color: $main-color;
+                box-shadow: 0.15rem 0.15rem 0.15rem $black;
+            }
+        }
+    }
+}

@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 13.3 32"><defs><style>.af156386-bc9b-4a99-b5ce-b16e96f13569{fill:none;}.ee265648-a0af-46cd-9f4f-336174b1d360{clip-path:url(#b509f3cb-dcf7-4dbe-b5cf-221eab3bdcb7);}.a37776e2-f70b-4880-8950-b10bcc00680c{fill:#ba0d0d;}.e3e01846-a006-425b-b444-e61a4fe9a490{fill:#ff1d0c;}</style><clipPath id="b509f3cb-dcf7-4dbe-b5cf-221eab3bdcb7" transform="translate(0 0)"><path class="af156386-bc9b-4a99-b5ce-b16e96f13569" d="M13.3,4.57V0H0V32H0l.18,0,.44-.07.45-.07.18,0,.55-.07h.07c1-.13,2.09-.22,3.14-.26H5c0-3.18,0-12.32,0-13.71H5c2.17-.05,4.34,0,6.49.16V13.37c-2.15-.11-4.32-.15-6.48-.11,0-3.22,0-6.31,0-8.77C7.81,4.48,10.56,4.5,13.3,4.57Z"/></clipPath></defs><title>Recurso 5</title><g id="bb35a5f5-f502-46ed-bc66-5f54af21e53b" data-name="Capa 2"><g id="f21e22df-844b-4feb-a0c1-56097803877d" data-name="Capa 1"><g class="ee265648-a0af-46cd-9f4f-336174b1d360"><path class="a37776e2-f70b-4880-8950-b10bcc00680c" d="M0,0H13.3V4.57C10.55,4.5,7.79,4.48,5,4.49v8.77c2.16,0,4.33,0,6.49.11v4.54c-2.16-.16-4.33-.21-6.49-.16q0,6.86,0,13.71A38.51,38.51,0,0,0,0,32Z" transform="translate(0 0)"/><path class="e3e01846-a006-425b-b444-e61a4fe9a490" d="M0,0V32a38.36,38.36,0,0,1,5-.54c0-1.35,0-5.08,0-9.54V17.75H5c0-7.4,0-15.38,0-17.75Z" transform="translate(0 0)"/></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 13.3 32" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>.af156386-bc9b-4a99-b5ce-b16e96f13569{fill:none;}.ee265648-a0af-46cd-9f4f-336174b1d360{clip-path:url(#a);}.a37776e2-f70b-4880-8950-b10bcc00680c{fill:#ba0d0d;}.e3e01846-a006-425b-b444-e61a4fe9a490{fill:#ff1d0c;}</style>
+<clipPath id="a" transform="translate(0)">
+<path class="af156386-bc9b-4a99-b5ce-b16e96f13569" d="m13.3 4.57v-4.57h-13.3v32h0.18l0.44-0.07 0.45-0.07h0.18l0.55-0.07h0.07c1-0.13 2.09-0.22 3.14-0.26h-0.01v-13.71c2.17-0.05 4.34 0 6.49 0.16v-4.61c-2.15-0.11-4.32-0.15-6.48-0.11v-8.77c2.8-0.01 5.55 0.01 8.29 0.08z"/>
+</clipPath>
+</defs>
+<title>Recurso 5</title>
+<g data-name="Capa 2">
+<g data-name="Capa 1">
+<g class="ee265648-a0af-46cd-9f4f-336174b1d360">
+<path class="a37776e2-f70b-4880-8950-b10bcc00680c" transform="translate(0)" d="M0,0H13.3V4.57C10.55,4.5,7.79,4.48,5,4.49v8.77c2.16,0,4.33,0,6.49.11v4.54c-2.16-.16-4.33-.21-6.49-.16q0,6.86,0,13.71A38.51,38.51,0,0,0,0,32Z"/>
+<path class="e3e01846-a006-425b-b444-e61a4fe9a490" transform="translate(0)" d="m0 0v32a38.36 38.36 0 0 1 5-0.54v-9.54-4.17-17.75z"/>
+</g>
+</g>
+</g>
+</svg>

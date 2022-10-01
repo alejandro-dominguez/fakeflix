@@ -3,6 +3,8 @@ const navMenu = document.querySelector(".navigation-menu");
 const htmlBody = document.querySelector("body");
 const parallax1 = document.querySelector(".img-1");
 const parallax2 = document.querySelector(".img-2");
+const parallax3 = document.querySelector(".contact-img2");
+const parallax4 = document.querySelector(".contact-img3");
 const fadeIn = document.querySelector(".fade-in");
 const headerContainer = document.querySelector(".about-container");
 const options = {threshold: 1, rootMargin: "0px"};
@@ -29,12 +31,20 @@ document.querySelector(".navigation-logo").addEventListener("click", () => {
     htmlBody.classList.remove("active")
 });
 
-// parallax effect //
+// about section parallax effect //
 
 window.addEventListener("scroll", () => {
     const scrollValue = window.scrollY
     parallax1.style.left = scrollValue * -2 + "px"
     parallax2.style.right = scrollValue * -2 + "px"
+});
+
+// contact section parallax effect //
+
+window.addEventListener("scroll", () => {
+    const scrollValue = window.scrollY
+    parallax3.style.rotate = scrollValue * -0.3 + "deg"
+    parallax4.style.left = scrollValue * -0.4 + "px"
 });
 
 // fade in animation //
