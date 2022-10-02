@@ -79,7 +79,7 @@ const loadDocs = (docs) => {
 // card animations //
 
 const cardAnimations = () => {
-    const cards = document.querySelectorAll(".modals-iFrame")
+    const cards = document.querySelectorAll(".cards")
 
     for (let i = 0; i < cards.length; i++) {
         const card = cards[i]
