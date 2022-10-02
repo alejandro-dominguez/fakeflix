@@ -1,10 +1,17 @@
 const cardsContainer = document.querySelector(".cards-container");
+const cardTemplate = document.querySelector("#template");
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
 let lastDoc = null;
 let firstDoc = null;
 const errorCard = document.querySelector(".cards-error");
 const loader = document.querySelector(".loader");
+
+// loading placeholders //
+
+for (let i = 0; i < 4; i++) {
+  cardsContainer.append(cardTemplate.content.cloneNode(true))
+};
 
 // data fecht //
 
@@ -72,7 +79,7 @@ const loadDocs = (docs) => {
 // card animations //
 
 const cardAnimations = () => {
-    const cards = document.querySelectorAll(".cards")
+    const cards = document.querySelectorAll(".modals-iFrame")
 
     for (let i = 0; i < cards.length; i++) {
         const card = cards[i]

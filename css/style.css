@@ -120,7 +120,6 @@ p {
   transform: translateY(0px); }
 
 .skeleton {
-  opacity: .7;
   animation: skeleton-loading 1s linear infinite alternate; }
 
 @keyframes skeleton-loading {
