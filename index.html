@@ -32,7 +32,7 @@
 
     <nav class="navigation">
         <div>
-            <img class="navigation-logo" src="./images/logo.svg" alt="logo fakeflix">
+            <img class="navigation-logo" src="./images/logo.svg" alt="logo fakeflix" loading="lazy">
         </div>
         <ul class="navigation-menu">
             <li class="navigation-item">
@@ -94,7 +94,7 @@
     <template id="template">
         <button type="button" class="main-button" data-bs-toggle="modal" data-bs-target="">
             <div class="cards">
-            <img class="cards-img" src="" alt="" loading="lazy">
+            <img class="cards-img skeleton" src="" alt="" loading="lazy">
                 <div class="cards-info">
                     <h3 class="cards-title">Title</h3>
                 </div>
@@ -110,9 +110,9 @@
                         </button>
                         <h4 class="modals-header">Header</h4>
                         <div class="modals-iFrame-container">
-                            <iframe class="modals-iFrame" src="" title="YouTube video player" frameborder="0"
+                            <iframe class="modals-iFrame skeleton" src="" title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-                                picture-in-picture" allowfullscreen>
+                                picture-in-picture" allowfullscreen loading="lazy">
                             </iframe>
                         </div>
                         <h5 class="modals-data"><b>Reparto:&nbsp;</b></h5>
@@ -152,7 +152,7 @@
     <!-- contact form -->
 
     <form class="contact-form" name="fakeflix-form" netlify>
-        <img class="contact-form-img" src="./images/camara.svg" alt="cámara filmadora">
+        <img class="contact-form-img" src="./images/camara.svg" alt="cámara filmadora" loading="lazy">
         <label class="contact-form-label" for="name">Nombre:</label>
         <input class="contact-form-input" type="text" name="name" required placeholder="Ingrese su nombre">
         <label class="contact-form-label" for="email">Email:</label>

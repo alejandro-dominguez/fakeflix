@@ -119,6 +119,16 @@ p {
   opacity: 1;
   transform: translateY(0px); }
 
+.skeleton {
+  opacity: .7;
+  animation: skeleton-loading 1s linear infinite alternate; }
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #a3b8c2; }
+  100% {
+    background-color: #f0f3f5; } }
+
 span {
   display: inline-block;
   opacity: 0;
@@ -329,7 +339,7 @@ span.reveal {
     height: 19.688rem;
     border-radius: 0.5rem;
     filter: drop-shadow(0 0.25rem 0.15rem rgba(20, 20, 20, 0.75));
-    padding-bottom: 1rem; }
+    margin-bottom: 1rem; }
     .modals-iFrame-container {
       display: flex;
       justify-content: center;
