@@ -80,7 +80,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute; }
+    position: relative; }
   .about-title {
     padding: 0 2rem;
     text-align: center;
@@ -363,7 +363,8 @@ span.reveal {
     position: absolute;
     left: 0;
     display: block;
-    width: 20%; }
+    width: 20%;
+    filter: drop-shadow(0 0.25rem 0.25rem #141414); }
   .contact-img2 {
     z-index: 2;
     position: absolute;
@@ -458,37 +459,75 @@ span.reveal {
         box-shadow: 0.15rem 0.15rem 0.15rem #000; }
 
 .footer {
+  margin: 3rem 0 2rem 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 0 10rem;
-  margin: 2rem 0 1rem 0; }
+  justify-content: center;
+  gap: 1.5rem; }
   .footer-link {
-    width: 15%; }
+    width: 12.5rem; }
   .footer-img {
-    cursor: pointer;
     display: block;
     width: 100%;
-    padding: 1rem 0;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .footer-img:hover, .footer-img:focus {
       transform: scale(1.05); }
   .footer-copy {
-    display: flex;
-    gap: 1rem;
-    justify-content: start;
-    align-items: center; }
-    .footer-copy-p {
-      text-align: center;
-      color: #fff; }
+    text-align: center;
+    color: #fff; }
+    .footer-copy-link {
+      width: 4rem; }
     .footer-copy-img {
       display: block;
-      width: 15%;
+      width: 100%;
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
       .footer-copy-img:hover, .footer-copy-img:focus {
         transform: scale(1.05); }
+
+@media only screen and (min-width: 1805px) {
+  .navigation {
+    padding: 2.5rem 25rem 2rem 25rem; }
+  .about-container {
+    margin-top: 35rem; }
+  .about-p {
+    padding: 0 40rem; }
+  .cards-img {
+    width: 30rem;
+    height: 22rem; }
+  .modals {
+    width: 50vw; }
+    .modals-iFrame {
+      width: 55rem;
+      height: 35rem; }
+  .contact-container {
+    margin: 5rem 0 38rem 0; }
+  .contact-form-img {
+    top: 2rem;
+    width: 20%; } }
+
+@media only screen and (min-width: 1580px) and (max-width: 1805px) {
+  .navigation {
+    padding: 2.5rem 25rem 2rem 25rem; }
+  .about-container {
+    margin-top: 26rem; }
+  .about-p {
+    padding: 0 35rem; }
+  .cards-img {
+    width: 25rem;
+    height: 18rem; }
+  .modals {
+    width: 50vw; }
+    .modals-iFrame {
+      width: 45rem;
+      height: 30rem; }
+  .contact-container {
+    margin: 5rem 0 30rem 0; }
+  .contact-form-img {
+    top: 2rem;
+    width: 20%; } }
 
 @media only screen and (max-width: 1180px) {
   .about-p {
@@ -523,11 +562,7 @@ span.reveal {
   .contact-p {
     width: 70vw; }
   .contact-form {
-    width: 70vw; }
-  .footer-link {
-    width: 35%; }
-  .footer-copy-img {
-    width: 25%; } }
+    width: 70vw; } }
 
 @media only screen and (max-width: 925px) {
   .about-p {
@@ -535,12 +570,6 @@ span.reveal {
   .contact-form-submit {
     background-color: #E50914;
     box-shadow: 0.15rem 0.15rem 0.15rem #000; } }
-
-@media only screen and (max-width: 780px) {
-  .footer-link {
-    width: 45%; }
-  .footer-copy-img {
-    width: 45%; } }
 
 @media only screen and (max-width: 695px) {
   .hamburger {
@@ -616,29 +645,7 @@ span.reveal {
   .contact-p {
     width: 90vw; }
   .contact-form {
-    width: 90vw; }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column-reverse;
-    padding: 0 5rem; }
-    .footer-link {
-      padding-bottom: 1rem; }
-    .footer-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-      padding-bottom: 1rem; }
-      .footer-copy-p {
-        padding-bottom: 1rem; }
-      .footer-copy-link {
-        display: contents; }
-      .footer-copy-img {
-        width: 20%;
-        padding-bottom: 1rem; } }
+    width: 90vw; } }
 
 @media only screen and (max-width: 576px) {
   .modals {
@@ -661,11 +668,7 @@ span.reveal {
       width: 100%;
       padding-left: 0.25rem; }
     .contact-form-textarea {
-      padding: 0.25rem 0 0 0.25rem; }
-  .footer-link {
-    width: 75%; }
-  .footer-copy-img {
-    width: 40%; } }
+      padding: 0.25rem 0 0 0.25rem; } }
 
 @media only screen and (max-width: 530px) {
   .modals {

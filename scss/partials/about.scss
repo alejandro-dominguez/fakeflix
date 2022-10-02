@@ -8,7 +8,7 @@
         margin-top: 20rem;
         padding-top: 2rem;
         @include flex-column;
-        position: absolute;
+        position: relative;
     }
 
     &-title{

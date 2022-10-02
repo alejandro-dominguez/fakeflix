@@ -1,5 +1,5 @@
 # Fakeflix
-Pizza palace es una web don puedes ver los trailers y la información de tus series favoritas.
+Fakeflix es una web donde puedes ver los trailers y la información de tus series favoritas.
 
 # Tecnologías
 En este proyecto he utilizado Java Script, HTML, CSS, SASS y Firestore.
@@ -8,7 +8,9 @@ En este proyecto he utilizado Java Script, HTML, CSS, SASS y Firestore.
 Bootstrap.
 
 # Conceptos trabajados
-Algunas de las habilidades que he adquirido en este proyecto son:
+Algunas de las habilidades que he trabajado en este proyecto son:
 - Recuperar datos de Firestore para generar el contenido de la página y las interacciones.
 - Paginar el contenido de la base de datos.
-- Generar animaciones de contenido utilizando el efecto parallax con JavaScript nativo y la api de IntersectionObserver.
+- Generar animaciones de contenido utilizando el efecto parallax con JavaScript nativo, la api de IntersectionObserver y event listeners como mouseover o scroll.
+- Generar animaciones de texto letra por letra.
+- Crear formulario funcional con netlify.

@@ -1,19 +1,15 @@
 .footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10rem;
-    margin: 2rem 0 1rem 0;
+    margin: 3rem 0 2rem 0;
+    @include flex-column;
+    gap: 1.5rem;
 
     &-link{
-        width: 15%;
+        width: 12.5rem;
     }
 
     &-img{
-        cursor: pointer;
         display: block;
         width: 100%;
-        padding: 1rem 0;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
 
@@ -23,19 +19,16 @@
     }
 
     &-copy{
-        display: flex;
-        gap: 1rem;
-        justify-content: start;
-        align-items: center;
+        text-align: center;
+        color: $white;
 
-        &-p{
-            text-align: center;
-            color: $white;
+        &-link{
+            width: 4rem;
         }
 
         &-img{
             display: block;
-            width: 15%;
+            width: 100%;
             -webkit-transition: all 0.3s;
             transition: all 0.3s;
     
