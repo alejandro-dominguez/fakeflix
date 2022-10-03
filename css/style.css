@@ -496,7 +496,14 @@ span.reveal {
       .footer-copy-img:hover, .footer-copy-img:focus {
         transform: scale(1.05); }
 
-@media only screen and (min-width: 1805px) {
+@media only screen and (min-width: 2300px) {
+  .cards-img {
+    width: 40rem;
+    height: 28rem; }
+  .cards-button {
+    font-size: 2rem; } }
+
+@media only screen and (min-width: 1805px) and (max-width: 2300px) {
   .navigation {
     padding: 2.5rem 25rem 2rem 25rem; }
   .about-container {
@@ -506,11 +513,15 @@ span.reveal {
   .cards-img {
     width: 30rem;
     height: 22rem; }
+  .cards-button {
+    font-size: 2rem; }
   .modals {
     width: 50vw; }
+    .modals-header {
+      font-size: 2.5rem; }
     .modals-iFrame {
-      width: 55rem;
-      height: 35rem; }
+      width: 40vw;
+      height: 50vh; }
   .contact-container {
     margin: 5rem 0 38rem 0; }
   .contact-form-img {
@@ -527,11 +538,15 @@ span.reveal {
   .cards-img {
     width: 25rem;
     height: 18rem; }
+  .cards-button {
+    font-size: 2rem; }
   .modals {
     width: 50vw; }
+    .modals-header {
+      font-size: 1.5rem; }
     .modals-iFrame {
-      width: 45rem;
-      height: 30rem; }
+      width: 40vw;
+      height: 50vh; }
   .contact-container {
     margin: 5rem 0 30rem 0; }
   .contact-form-img {
