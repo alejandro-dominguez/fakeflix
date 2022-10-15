@@ -498,11 +498,31 @@ span.reveal {
         transform: scale(1.05); }
 
 @media only screen and (min-width: 2300px) {
+  .navigation {
+    padding: 2.5rem 25rem 2rem 25rem; }
+  .about-container {
+    margin-top: 35rem; }
   .cards-img {
     width: 40rem;
     height: 28rem; }
   .cards-button {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  .modals {
+    width: 50vw; }
+    .modals-header {
+      font-size: 2.5rem; }
+    .modals-iFrame {
+      width: 40vw;
+      height: 50vh; }
+  .contact-container {
+    margin: 5rem 0 42rem 0; }
+  .contact-p {
+    padding: 0 15rem; }
+  .contact-form {
+    width: 35vw; }
+  .contact-form-img {
+    top: 2rem;
+    width: 20%; } }
 
 @media only screen and (min-width: 1805px) and (max-width: 2300px) {
   .navigation {
@@ -525,6 +545,10 @@ span.reveal {
       height: 50vh; }
   .contact-container {
     margin: 5rem 0 38rem 0; }
+  .contact-p {
+    padding: 0 15rem; }
+  .contact-form {
+    width: 40vw; }
   .contact-form-img {
     top: 2rem;
     width: 20%; } }

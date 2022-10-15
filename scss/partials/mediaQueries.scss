@@ -1,6 +1,14 @@
 @media only screen and (min-width: 2300px){
 
-    .cards-img {
+    .navigation{
+        padding: 2.5rem 25rem 2rem 25rem;
+    }
+
+    .about-container{
+        margin-top: 35rem;
+    }
+
+    .cards-img{
         width: 40rem;
         height: 28rem;
     }
@@ -9,15 +17,44 @@
         font-size: 2rem;
     }
 
+    .modals{
+        width: 50vw;
+
+        &-header{
+            font-size: 2.5rem;
+        }
+
+        &-iFrame{
+            width: 40vw;
+            height: 50vh;
+        }
+    }
+
+    .contact-container{
+        margin: 5rem 0 42rem 0;
+    }
+
+    .contact-p{
+        padding: 0 15rem;
+    }
+
+    .contact-form{
+        width: 35vw;
+    }
+
+    .contact-form-img{
+        top: 2rem;
+        width: 20%;
+    }
 }
 
 @media only screen and (min-width: 1805px) and (max-width: 2300px){
 
-    .navigation {
+    .navigation{
         padding: 2.5rem 25rem 2rem 25rem;
     }
 
-    .about-container {
+    .about-container{
         margin-top: 35rem;
     }
 
@@ -25,7 +62,7 @@
         padding: 0 40rem;
     }
 
-    .cards-img {
+    .cards-img{
         width: 30rem;
         height: 22rem;
     }
@@ -51,7 +88,15 @@
         margin: 5rem 0 38rem 0;
     }
 
-    .contact-form-img {
+    .contact-p{
+        padding: 0 15rem;
+    }
+
+    .contact-form{
+        width: 40vw;
+    }
+
+    .contact-form-img{
         top: 2rem;
         width: 20%;
     }
@@ -59,11 +104,11 @@
 
 @media only screen and (min-width: 1580px) and (max-width: 1805px){
 
-    .navigation {
+    .navigation{
         padding: 2.5rem 25rem 2rem 25rem;
     }
 
-    .about-container {
+    .about-container{
         margin-top: 26rem;
     }
 
@@ -71,7 +116,7 @@
         padding: 0 35rem;
     }
 
-    .cards-img {
+    .cards-img{
         width: 25rem;
         height: 18rem;
     }
@@ -97,7 +142,7 @@
         margin: 5rem 0 30rem 0;
     }
 
-    .contact-form-img {
+    .contact-form-img{
         top: 2rem;
         width: 20%;
     }
@@ -376,7 +421,7 @@
 
 @media only screen and (max-width: 436px){
 
-    .navigation {
+    .navigation{
         padding: 2.5rem 3rem 2rem 3rem;
 
         &-logo{
