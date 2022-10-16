@@ -7,12 +7,6 @@ let firstDoc = null;
 const errorCard = document.querySelector(".cards-error");
 const loader = document.querySelector(".loader");
 
-// loading placeholders //
-
-for (let i = 0; i < 4; i++) {
-  cardsContainer.append(cardTemplate.content.cloneNode(true))
-};
-
 // data fecht //
 
 document.addEventListener("DOMContentLoaded", () => {
